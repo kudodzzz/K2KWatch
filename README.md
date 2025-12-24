@@ -4,10 +4,9 @@ K2KWatch source code
 
 # CURRENT STATUS
 - Web Status : **Online🟢**
-- Updated :
-**Conan Movie 1-28**
-- there are currently no other movies series.
-- this update is a huge update
+- We currently have the following movie lists:
+- Conan Movie (28 episodes)
+- Chinese Animation and Sculpture (6 episodes)
 
 # CURRENT DOMAIN
 - https://watch.kdz.ct.ws
