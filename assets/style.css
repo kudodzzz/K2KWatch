@@ -1,0 +1,87 @@
+body { font-family: 'Baloo 2', cursive; background-color: #020617; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+.text-gradient { background: linear-gradient(to right, #22d3ee, #4f46e5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.section-title-line { border-left: 4px solid #22d3ee; padding-left: 1rem; margin-bottom: 2rem; }
+
+.card-custom { 
+    display: block; 
+    background: #0f172a; 
+    border-radius: 1rem; 
+    overflow: hidden; 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    border: 1px solid rgba(255,255,255,0.05); 
+    height: 100%; 
+}
+.card-custom:hover { 
+    transform: translateY(-10px); 
+    border-color: #22d3ee; 
+    box-shadow: 0 20px 40px -15px rgba(34, 211, 238, 0.3); 
+}
+
+.loader-container-v2 {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.main-logo-v2 {
+    width: 150px;
+    height: auto;
+    position: relative;
+    z-index: 10;
+    filter: drop-shadow(0 0 25px rgba(34, 211, 238, 0.6));
+    animation: floatV2 2.5s ease-in-out infinite;
+}
+
+.ring {
+    position: absolute;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.ring:nth-child(1) {
+    width: 180px;
+    height: 180px;
+    border-top-color: #22d3ee;
+    animation: rotateRing 2s linear infinite, fadeInOut 2s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.ring:nth-child(2) {
+    width: 160px;
+    height: 160px;
+    border-right-color: #4f46e5;
+    animation: rotateRing 2s linear reverse infinite, fadeInOut 2s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+
+.ring:nth-child(3) {
+    width: 140px;
+    height: 140px;
+    border-bottom-color: #a855f7;
+    animation: rotateRing 2s linear infinite, fadeInOut 2s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+
+@keyframes floatV2 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes rotateRing {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1); }
+}
